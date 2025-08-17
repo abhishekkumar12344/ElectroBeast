@@ -28,8 +28,8 @@ const Contact = () => {
         <div className="contact-info" data-aos="fade-left">
           <h2>Get in Touch</h2>
           <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-          <p><strong>📧 Email:</strong> support@evenergy.com</p>
-          <p><strong>📍 Address:</strong> Prem Parth Enterprises, Patna, India</p>
+          <p><strong>📧 Email:</strong> Electrobeast@evenergy.com</p>
+          <p><strong>📍 Address:</strong> Electro Beast , Durgapur, India</p>
           <p><strong>⏰ Business Hours:</strong> Mon - Sat: 9:00 AM - 6:00 PM</p>
           <div className="map-container" data-aos="zoom-in">
             <iframe title="Company Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228346.95113800953!2d85.0079566!3d25.5940947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5854f39f29e7%3A0x5d5b4c57c0e9c993!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1691399466203!5m2!1sen!2sin" width="100%" height="200" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>

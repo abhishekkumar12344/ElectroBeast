@@ -140,7 +140,12 @@ const Services = () => {
       {/* CTA */}
       <section className="cta-section" data-aos="zoom-in">
         <h2>Ready to Switch to Clean Mobility?</h2>
-        <button className="cta-btn">Contact Us</button>
+        <button
+          className="cta-btn"
+          onClick={() => navigate("/contact")}
+        >
+          Contact Us
+        </button>
       </section>
     </div>
     

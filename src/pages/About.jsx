@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./About.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
+  const navigate = useNavigate();
   useEffect(() => { AOS.init({ duration: 1000 }); }, []);
 
   return (
@@ -59,7 +61,14 @@ const About = () => {
 
       <section className="about-cta" data-aos="zoom-in-up">
         <h2>Ready to Explore the Future?</h2>
-        <button className="cta-btn">Explore Our Vehicles</button>
+        {/* <button className="cta-btn">Explore Our Vehicles</button> */}
+        <button
+          className="cta-btn"
+          onClick={() => navigate("/Vehicles")}
+        >
+          Explore Our Vehicles
+          
+        </button>
       </section>
     </div>
   );
