@@ -1,7 +1,7 @@
 /* Contact Page Styling */
 .contact-page { font-family: Arial, sans-serif; color:#333; }
 /* Hero Section */
-.contact-hero { text-align:center; padding:80px 20px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.freepik.com/premium-photo/charging-electric-car-with-lightning-energy-background_691560-4236.jpg') center/cover no-repeat; color:#fff; }
+.contact-hero { text-align:center; padding:80px 20px; background: linear-gradient(rgba(52, 236, 39, 0.6), rgba(78, 24, 133, 0.6)), url('https://imgs.search.brave.com/rhah8_cURKVJeKUMxXb6MrwhVuJ-tf-Pxrpi-zrp8xk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTc0/NTk4NjI3MC9waG90/by9lbGVjdHJpYy1j/YXItd2l0aC1iYXR0/ZXJ5LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1zZ0ZqaTc4/NlBhcDJlc01uNE1h/UHNGRjlRWlp4UzE4/U2Y0dG1wemJMMXpj/PQ') center/cover no-repeat; color:#fff; }
 .contact-hero h1 { font-size:2.5rem; margin-bottom:10px; }
 .contact-hero p { font-size:1.2rem; }
 /* Contact Container */
@@ -24,3 +24,18 @@
 .social-links a:hover { color:#ff6600; }
 /* Responsive */
 @media (max-width: 768px) { .contact-container { flex-direction:column; padding:30px 5%; } .contact-form, .contact-info { width:100%; } }
+
+.map-link a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.map-link a:hover {
+  background: #218838;
+}

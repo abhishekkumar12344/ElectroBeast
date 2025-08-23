@@ -1,6 +1,6 @@
 .about-page { font-family: "Poppins", sans-serif; color: #222; line-height: 1.6; }
 /* Hero Section */
-.about-hero { text-align:center; padding:80px 20px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://img.freepik.com/free-photo/electric-car-futuristic-city_23-2151775702.jpg") no-repeat center/cover; color:#fff; }
+.about-hero { text-align:center; padding:80px 20px; background: linear-gradient(rgba(55, 48, 48, 0.6), rgba(46, 206, 31, 0.6)), url("") no-repeat center/cover; color:#fff; }
 .about-hero h1 { font-size: 3rem; margin-bottom:10px; }
 .about-hero p { font-size:1.2rem; }
 /* Company Story */

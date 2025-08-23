@@ -27,12 +27,24 @@ const Contact = () => {
 
         <div className="contact-info" data-aos="fade-left">
           <h2>Get in Touch</h2>
-          <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-          <p><strong>📧 Email:</strong> Electrobeast@evenergy.com</p>
+          <p><strong>📞 Phone:</strong> +91 9091748988</p>
+          <p><strong>📧 Email:</strong> beastelectro0@gmail.com</p>
           <p><strong>📍 Address:</strong> Electro Beast , Durgapur, India</p>
           <p><strong>⏰ Business Hours:</strong> Mon - Sat: 9:00 AM - 6:00 PM</p>
+           {/* Google Map Link Section */}
+
+      <div className="map-link">
+        <a
+          href="https://www.google.com/maps/place/ELECTRO+BEAST/@23.3644055,87.980025,17z/data=!3m1!4b1!4m6!3m5!1s0x39f84d03e1b1736d:0xde255a5141542e1b!8m2!3d23.3644006!4d87.9825999!16s%2Fg%2F11lz5twx3q?hl=en-IN&entry=ttu&g_ep=EgoyMDI1MDgxOC4wIKXMDSoASAFQAw%3D%3" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📍 View on Google Maps
+        </a>
+      </div>
+    
           <div className="map-container" data-aos="zoom-in">
-            <iframe title="Company Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228346.95113800953!2d85.0079566!3d25.5940947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5854f39f29e7%3A0x5d5b4c57c0e9c993!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1691399466203!5m2!1sen!2sin" width="100%" height="200" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+            <iframe title="Company Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.626250378632!2d87.2741243!3d23.5598052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f76d5a0b659987%3A0x498fd76d41e651b6!2sELECTRO%20BEAST!5e0!3m2!1sen!2sin!4v1723970736000!5m2!1sen!2sin" width="100%" height="200" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
           </div>
           <div className="social-links">
             <a href="#">🌐 Facebook</a>
