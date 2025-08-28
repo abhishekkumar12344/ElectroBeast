@@ -21,7 +21,7 @@ const About = () => {
           <p>We started with a vision to revolutionize the future of mobility by making transportation eco-friendly and sustainable. Our electric vehicles and high-performance lithium batteries are designed to power a cleaner tomorrow.</p>
         </div>
         <div className="about-image">
-          <img src="https://imgs.search.brave.com/rp1FKS2ngt4b5izdLYAWtibfVrOy20QAyopzPFetaRc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFwNzFDOHUxZ0wu/anBn" alt="EV Charging" />
+          <img src="/assets/products/battry.jpg" alt="EV Charging" />
         </div>
       </section>
 

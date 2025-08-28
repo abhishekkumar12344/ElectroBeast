@@ -1,15 +1,6 @@
 /* Footer */
 .footer {
-  background: #0a0a0a;
-  color: #fff;
-  padding: 50px 20px 20px;
-  font-family: "Poppins", sans-serif;
-}
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
+  
   margin: auto;
 }
 .footer-section h2,

@@ -24,20 +24,21 @@ h2 {
 
 /* ===== HERO ===== */
 .hero {
-  height: 100vh;         /* Full screen height */
-  width: 100%;          /* Full screen width */
-  margin: 0;             /* Remove outer margin */
-  padding: 0;            /* Remove inner padding */
-  display: flex;         /* Center content */
+   height: 110vh;          
+   width: 100%;         
+  display: flex;         
   align-items: center;
   justify-content: center;
   color: #fff;
   position: relative;
   overflow: hidden;
-  background:url("https://imgs.search.brave.com/avFzmWnnnkU3OeqYw69KozHw8Nf6MjRDWic4IDKsUsA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/MS8zMC8wMi8wNi9j/YXItMzExNzc3OF82/NDAuanBn") no-repeat center/cover;
+  background:url("/assets/products/product2.jpg") no-repeat center/cover; 
+   background-size: cover;      
+   background-repeat: no-repeat;  
   text-align: center;
   
 }
+
 
 .hero-title {
   font-size: 3rem;
@@ -60,7 +61,7 @@ h2 {
   transition: 0.3s;
 }
 .cta-btn:hover {
-  background: #009624;
+  background: #0caf04;
 }
 .glowing-btn {
   box-shadow: 0 0 15px #00c853, 0 0 25px #00c853;
@@ -333,5 +334,12 @@ h2 {
   .about {
     flex-direction: column;
     text-align: center;
+  }
+}
+/* On smaller screens, reduce height */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;  /* smaller height on mobiles */
+    background-size: contain; /* show full image */
   }
 }

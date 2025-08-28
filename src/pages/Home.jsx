@@ -16,6 +16,7 @@ const Home = () => {
       {/* Hero Section */}
      {/* Hero */}
 <section className="hero">
+  
   <div className="hero-content" data-aos="fade-up">
     <h1 className="hero-title">Innovating the Future of Mobility</h1>
     <p className="hero-subtitle">
@@ -90,7 +91,7 @@ const Home = () => {
         <h2>Our Products</h2>
         <div className="product-cards">
           <div className="product-card">
-            <img src="https://imgs.search.brave.com/qcUVoiBz4nXAWy5fDJHby-OX9e-6ppqVH0PMtmNQbsc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vUmlk/c3Rhci0yMC1GYXQt/VGlyZS1FLUJpa2Ut/Zm9yLUFkdWx0cy0x/MjAwVy0zME1QSC1N/b3VudGFpbi1CaWtl/LTQ4Vi0xNS02QWgt/RWxlY3RyaWMtQmlj/eWNsZS03LVNwZWVk/LU9mZi1Sb2FkLVVM/Mjg0OV81ZjQ5MTg1/Yy1iMWUyLTQxZDQt/YjM4ZC1hMWI5NWYy/YTE0YjIuZDFkMTNk/NzQwMDllMjZlNzBl/OTBlY2Q2YjBlZjdh/NTEuanBlZz9vZG5I/ZWlnaHQ9NTgwJm9k/bldpZHRoPTU4MCZv/ZG5CZz1GRkZGRkY" alt="EcoRide X1" />
+            <img src="/assets/products/product3.jpg" alt="EcoRide X1" />
             <h3>EcoRide X1</h3>
             <p>Lightweight electric cycle with 50km range.</p>
             <Link to="/Products" className="btn btn-primary">View Details</Link>
@@ -116,7 +117,7 @@ const Home = () => {
 
           {/* Highlighted Battery */}
           <div className="product-card highlight">
-            <img src="https://imgs.search.brave.com/FhcYGq9Ofbe8SkJTzncuHmfgdzub9jePAgpUbtKNqPk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ0/NjY4MzgxNC9waG90/by9lbGVjdHJpYy12/ZWhpY2xlLWxpdGhp/dW0taW9uLXJlY2hh/cmdlYWJsZS1iYXR0/ZXJ5LW1vZHVsZS1p/bnNpZGUtbWV0YWwt/ZW5jbG9zdXJlLXBh/Y2tlZC1mb3IuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUJU/ck5BdDl5TTRjcWRy/cFBSYUxtdTlORkxP/OXQyS0g1UzdQbFl2/S2YzV3c9" alt="UltraPower Battery" />
+            <img src="/assets/products/battry.jpg" />
             <h3>UltraPower Battery 🔋</h3>
             <p>Latest lithium tech — faster charging, lightweight & eco-friendly.</p>
             <Link to="/products/ultrapower-battery" className="btn btn-primary">Discover More</Link>
@@ -182,15 +183,7 @@ const Home = () => {
         </form>
       </section>
 
-      {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/916207112780"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬
-      </a>
+     
     </div>
   );
 };

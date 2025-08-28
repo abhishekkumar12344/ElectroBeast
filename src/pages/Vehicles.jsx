@@ -13,8 +13,43 @@ const Vehicles = () => {
 
   const vehicles = {
     Cycles: [
+       {
+      id: 1,
+      name: "Electric Cycle",
+      category: "Cycle",
+      price: 35000,
+      rating: 4,
+      image: "/assets/products/product1.jpg"},
       {
-        id: 1,
+      id: 2,
+      name: "Electric Cycle",
+      category: "Cycle",
+      price: 30000,
+      rating: 4,
+      image: "/assets/products/product2.jpg"},
+      {
+      id: 3,
+      name: "Electric Cycle",
+      category: "Cycle",
+      price: 39000,
+      rating: 4,
+      image: "/assets/products/product6.jpg"},
+      {
+      id: 4,
+      name: "Electric Cycle",
+      category: "Cycle",
+      price: 99000,
+      rating: 4,
+      image: "/assets/products/product4.jpg"},
+      {
+      id: 5,
+      name: "Electric Cycle",
+      category: "Cycle",
+      price: 77000,
+      rating: 4,
+      image: "/assets/products/product5.jpg"},
+      {
+        id: 6,
         name: "EcoRide X1",
         price: "₹35,000",
         range: "50 km",
@@ -23,7 +58,7 @@ const Vehicles = () => {
         image: "https://imgs.search.brave.com/PnAF6pmo3FsHk68IpsrSmdpGHCusM6JNuAFz9W5hpEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzYxMi82MTIveGlm/MHEvZWxlY3RyaWMt/Y3ljbGUvay81L3ov/aHVtLWxvbmctcmFu/Z2Utc21hcnQtcGx1/cy1ibGFjay1vcmFu/Z2UtMTgtNS1tb3Rv/dm9sdC1zaW5nbGUt/b3JpZ2luYWwtaW1h/Z3A3ejZoZnN1bnVi/dS5qcGVnP3E9NzA",
       },
       {
-        id: 2,
+        id: 7,
         name: "Urban Ride Pro",
         price: "₹45,000",
         range: "65 km",
@@ -32,7 +67,7 @@ const Vehicles = () => {
         image: "https://imgs.search.brave.com/7wIZ39-TimS9vLBF13TK3ODTepWEE_IOhOpvNwDfx9A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9j/b29sLWJpY3ljbGUt/b3V0ZG9vcnNfMjMt/MjE1MDg4NDI3Mi5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw",
       },
       {
-        id: 3,
+        id: 8,
         name: "EcoRide X1",
         price: "₹35,000",
         range: "50 km",
@@ -41,7 +76,7 @@ const Vehicles = () => {
         image: "https://imgs.search.brave.com/Hu-KnYsEnIvV0HvsPSCfqa5Cz_KjBb2Tc1lD-1rWSzs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTg5Nzg4MDYtNzMw/NzM4NDNiMTVlP2Zt/PWpwZyZxPTYwJnc9/MzAwMCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE5IeDhaV3hsWTNS/eWFXTWxNakJpYVdO/NVkyeGxmR1Z1ZkRC/OGZEQjhmSHd3",
       },
       {
-        id: 4,
+        id: 9,
         name: "EcoRide X1",
         price: "₹35,000",
         range: "50 km",
@@ -50,9 +85,9 @@ const Vehicles = () => {
         image: "https://imgs.search.brave.com/7ysBpnDXDdzkusCuWhD4uQOc82LRSkv7VlQ9zJXqNBo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGV5YmlrZS5jb20v/Y2RuL3Nob3AvZmls/ZXMvSGV5YmlrZV9I/b3Jpem9uX1VfQmVz/dF9FbGVjdHJpY19C/aWtlX0RlYWxzX0Jl/c3RfRm9sZGluZ19G/YXRfVGlyZV9FYmlr/ZV9Pbl9TYWxlLnBu/Zz92PTE3NTQzOTA3/MzAmd2lkdGg9MjA0/OA",
       },
       {
-        id: 5,
+        id: 10,
         name: "EcoRide X1",
-        price: "₹35,000",
+        price: "₹66,000",
         range: "50 km",
         speed: "25 km/h",
         battery: "Lithium-ion 36V",
@@ -63,7 +98,7 @@ const Vehicles = () => {
       {
         id: 6,
         name: "VoltScoot S1",
-        price: "₹80,000",
+        price: "₹440,000",
         range: "100 km",
         speed: "60 km/h",
         battery: "Lithium-ion 60V",

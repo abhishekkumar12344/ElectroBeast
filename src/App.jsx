@@ -9,6 +9,7 @@ import Vehicles from "./pages/Vehicles.jsx";
 import Battery from "./pages/Battery.jsx";
 import Contact from "./pages/Contact.jsx";
 import Products from "./pages/Products";
+import WhatsAppButton from "./components/WhatsAppButton";
 import "./index.css";
 
 export default function App() {
@@ -24,7 +25,10 @@ export default function App() {
           <Route path="/battery" element={<Battery />} />
           <Route path="/contact" element={<Contact />} />
             <Route path="/products" element={<Products />} />
+            
         </Routes>
+        <WhatsAppButton />
+        
       </main>
       <Footer />
     </>

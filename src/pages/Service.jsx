@@ -36,7 +36,7 @@ const Services = () => {
           <div className="viewer">
             <h3>Electric Cycle</h3>
             <img
-              src="https://imgs.search.brave.com/ziLeJiAf7tGga1zRFdSI2YBwNhEpmaEjXSnOrpBG_Vg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzRhLzY5/LzdkLzRhNjk3ZGM1/NjZmZWM5M2UxZTdl/MjY2OTBlZTQ4MTA1/LmpwZw"
+              src="/assets/products/product3.jpg"
               alt="Electric Cycle"
               className="rotate-img"
             />
@@ -58,7 +58,7 @@ const Services = () => {
         <div className="grid-container">
           <div className="service-card" data-aos="flip-left">
             <img
-              src="https://images.unsplash.com/photo-1624996379674-7d2c7e0d7f73"
+              src="/assets/products/product.jpg"
               alt="Cycle Manufacturing"
             />
             <h3>Electric Cycle Manufacturing</h3>
@@ -67,7 +67,7 @@ const Services = () => {
           </div>
           <div className="service-card" data-aos="flip-left" data-aos-delay="200">
             <img
-              src="https://images.unsplash.com/photo-1581090700227-4c4f50b6c5f5"
+              src="/assets/products/battry.jpg"
               alt="Battery Technology"
             />
             <h3>Lithium Battery Technology</h3>
@@ -85,7 +85,7 @@ const Services = () => {
           </div>
           <div className="service-card" data-aos="flip-left" data-aos-delay="600">
             <img
-              src="https://images.unsplash.com/photo-1627454823369-62d7f2cc8eec"
+              src="https://imgs.search.brave.com/H0yRUdOMm1zZrJQQBLrQfG4bECx1bNnp9uzh-JH8BdE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxU0lWaUUyd3pM/LmpwZw"
               alt="Innovation"
             />
             <h3>Future Innovation</h3>
