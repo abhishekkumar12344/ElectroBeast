@@ -1,4 +1,4 @@
-/* General Header Styling */
+/* ===== General Header Styling ===== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   color: rgb(184, 244, 5);
 }
 
-/* Desktop Navbar */
+/* ===== Desktop Navbar ===== */
 .nav-links {
   display: flex;
   gap: 25px;
@@ -45,12 +45,12 @@
   color: #00b894;
 }
 
-
-
+/* ===== Hamburger Button ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1100; /* keeps above nav */
 }
 
 .menu-toggle .bar {
@@ -58,10 +58,23 @@
   width: 25px;
   background-color: white;
   margin: 4px 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-/* Responsive: Mobile */
+/* ===== Hamburger Animation (Open → Close "X") ===== */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== Responsive: Mobile ===== */
 @media screen and (max-width: 768px) {
   .nav-links {
     position: absolute;

@@ -33,7 +33,7 @@ const Battery = () => {
       id: 3,
       name: "Smart BMS Pack",
       desc: "Advanced battery pack with Smart BMS and fast charging.",
-      img: "https://imgs.search.brave.com/5c7pxVzRplIeB5F2hRu5XPzjGCiHHznhP3ifdv2NLMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTQv/MDg3Lzg0OC9zbWFs/bC9hLXBpbGUtb2Yt/bGl0aGl1bS1iYXR0/ZXJpZXMtd2l0aC1k/YXJrLWJhY2tncm91/bmQtcGhvdG8uanBn",
+      img: "https://imgs.search.brave.com/TuSvCGptTHzrShyRbuqRlCBNlU9pxCSn7ssMUXhCnws/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzExLzg3LzQyLzc1/LzM2MF9GXzExODc0/Mjc1ODJfTTBoT0p2/TFJyalFDSGVFell2/djZaSDZ6cEh4Q3dX/dE0uanBn",
       price: "₹28,000",
       specs: "72V | 20Ah | 3 Year Warranty"
     },

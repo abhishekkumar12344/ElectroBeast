@@ -44,7 +44,7 @@ const Services = () => {
           <div className="viewer">
             <h3>Lithium Battery</h3>
             <img
-              src="https://imgs.search.brave.com/lh1JGn3XNEjXRB6VFYHAgQ2P9MibS5NkS6R0dTVqEQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDAv/MzI1LzYxOS9zbWFs/bC9haS1nZW5lcmF0/ZWQtY2hhcmdpbmct/YmF0dGVyeS1pc29s/YXRlZC1vbi10cmFu/c3BhcmVudC1iYWNr/Z3JvdW5kLWZyZWUt/cG5nLnBuZw"
+              src="https://imgs.search.brave.com/7Qe3yTv4OE7IjlnOetX4Kfo0APevmT4aHYmFIhzP2Lg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM1/OTAzNzkyMS9waG90/by8zZC1yZW5kZXIt/d2hpdGUtYmx1ZS1s/aXRoaXVtLWJhdHRl/cmllcy1hYnN0cmFj/dC1jb25jZXB0Lmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1W/ZVNaeVEwRXBRYnNl/ZlcxNVpudEdfSnJC/YWV3TjFKZlU3RFNB/ZFliWFBjPQ"
               alt="Lithium Battery"
               className="rotate-img"
             />
