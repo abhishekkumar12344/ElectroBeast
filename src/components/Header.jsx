@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext"; // adjust path if needed
 import "./Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext); // get auth state
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -16,19 +18,30 @@ const Header = () => {
         <Link to="/">
           <img src="/logo.png" alt="Logo" className="logo-img" />
         </Link>
-        <h2> ELECTRO BEAST</h2>
+        <h2>ELECTRO BEAST</h2>
       </div>
 
       {/* Desktop Navbar */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-       <Link to="/Service">Service </Link>
+        <Link to="/service">Service</Link>
         <Link to="/vehicles">Vehicles</Link>
         <Link to="/battery">Battery</Link>
-        <Link to="/Products">Products </Link>
+        <Link to="/products">Products</Link>
         <Link to="/contact">Contact</Link>
-         
+
+        {/* Conditional Rendering Based on Auth */}
+        {user ? (
+          <>
+            <Link to="/dashboard">Dashboard</Link>
+            <button onClick={logout} className="logout-btn">
+              Logout
+            </button>
+          </>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </nav>
 
       {/* Hamburger Button (Mobile) */}

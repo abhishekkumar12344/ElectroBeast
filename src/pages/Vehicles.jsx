@@ -19,6 +19,9 @@ const Vehicles = () => {
       category: "Cycle",
       price: 35000,
       rating: 4,
+       range: "50 km",
+        speed: "25 km/h",
+        battery: "Lithium-ion 36V",
       image: "/assets/products/product1.jpg"},
       {
       id: 2,
@@ -26,6 +29,9 @@ const Vehicles = () => {
       category: "Cycle",
       price: 30000,
       rating: 4,
+       range: "50 km",
+        speed: "25 km/h",
+        battery: "Lithium-ion 36V",
       image: "/assets/products/product2.jpg"},
       {
       id: 3,
@@ -33,6 +39,9 @@ const Vehicles = () => {
       category: "Cycle",
       price: 39000,
       rating: 4,
+       range: "50 km",
+        speed: "25 km/h",
+        battery: "Lithium-ion 36V",
       image: "/assets/products/product6.jpg"},
       {
       id: 4,
@@ -40,12 +49,18 @@ const Vehicles = () => {
       category: "Cycle",
       price: 99000,
       rating: 4,
+       range: "50 km",
+        speed: "25 km/h",
+        battery: "Lithium-ion 36V",
       image: "/assets/products/product4.jpg"},
       {
       id: 5,
       name: "Electric Cycle",
       category: "Cycle",
       price: 77000,
+      range: "50 km",
+        speed: "25 km/h",
+        battery: "Lithium-ion 36V",
       rating: 4,
       image: "/assets/products/product5.jpg"},
       {
@@ -61,9 +76,9 @@ const Vehicles = () => {
         id: 7,
         name: "Urban Ride Pro",
         price: "₹45,000",
-        range: "65 km",
-        speed: "30 km/h",
-        battery: "Lithium-ion 48V",
+       range :"55km",
+       speed :"25 km/h",
+       battery:"Lithium-ion 44v",
         image: "https://imgs.search.brave.com/7wIZ39-TimS9vLBF13TK3ODTepWEE_IOhOpvNwDfx9A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9j/b29sLWJpY3ljbGUt/b3V0ZG9vcnNfMjMt/MjE1MDg4NDI3Mi5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw",
       },
       {
@@ -96,7 +111,7 @@ const Vehicles = () => {
     ],
     Scooters: [
       {
-        id: 6,
+        id: 11,
         name: "VoltScoot S1",
         price: "₹440,000",
         range: "100 km",
@@ -107,7 +122,7 @@ const Vehicles = () => {
     ],
     Cars: [
       {
-        id: 7,
+        id: 12,
         name: "EcoCar Z",
         price: "₹5,50,000",
         range: "250 km",
