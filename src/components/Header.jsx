@@ -11,41 +11,48 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
       {/* Logo clickable */}
       <div className="logo">
-        <Link to="/">
+        <Link to="/" onClick={closeMenu}>
           <img src="/logo.png" alt="Logo" className="logo-img" />
         </Link>
         <h2>ELECTRO BEAST</h2>
       </div>
 
-      {/* Desktop Navbar */}
+      {/* Navbar */}
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/service">Service</Link>
-        <Link to="/vehicles">Vehicles</Link>
-        <Link to="/battery">Battery</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/service" onClick={closeMenu}>Service</Link>
+        <Link to="/vehicles" onClick={closeMenu}>Vehicles</Link>
+        <Link to="/battery" onClick={closeMenu}>Battery</Link>
+        <Link to="/products" onClick={closeMenu}>Products</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
 
         {/* Conditional Rendering Based on Auth */}
         {user ? (
           <>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/dashboard" onClick={closeMenu}>Dashboard</Link>
             <button onClick={logout} className="logout-btn">
               Logout
             </button>
           </>
         ) : (
-          <Link to="/login">Login</Link>
+          <Link to="/login" onClick={closeMenu}>Login</Link>
         )}
       </nav>
 
       {/* Hamburger Button (Mobile) */}
-      <div className="menu-toggle" onClick={toggleMenu}>
+      <div
+        className={`menu-toggle ${menuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
