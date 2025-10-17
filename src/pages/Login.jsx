@@ -22,7 +22,6 @@ const Login = () => {
 
   // Handle form submission
   const handleSubmit = async (e) => {
-    console.log(e);
     e.preventDefault();
     setLoading(true);
     setError("");
@@ -42,13 +41,10 @@ const Login = () => {
       console.error("Login error:", error);
 
       if (error.response) {
-        // Server responded with error status
         setError(error.response.data.message || "Login failed");
       } else if (error.request) {
-        // Network error
         setError("Network error. Please check your connection.");
       } else {
-        // Other error
         setError("An unexpected error occurred.");
       }
     } finally {
@@ -98,6 +94,47 @@ const Login = () => {
           Don't have an account? <Link to="/register">Register</Link>
         </p>
       </div>
+
+      {/* --- ADDED THIS SECTION FOR THE ANIMATED WAVES --- */}
+      <div className="wave-container">
+        <svg
+          className="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shapeRendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g className="parallax">
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      {/* --- END OF ADDED SECTION --- */}
     </div>
   );
 };
