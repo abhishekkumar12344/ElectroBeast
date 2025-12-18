@@ -14,6 +14,8 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx"; // 🔑 import
+import VehicleDetails from "./pages/VehicleDetails";
+import OrderPage from "./pages/OrderPage.jsx" 
 
 import "./index.css";
 
@@ -30,6 +32,8 @@ export default function App() {
           <Route path="/battery" element={<Battery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/vehicle/:id" element={<VehicleDetails />} />
+           <Route path="/order" element={<OrderPage />} /> 
 
           {/* Auth */}
           <Route path="/login" element={<Login />} />

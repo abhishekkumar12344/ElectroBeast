@@ -114,6 +114,32 @@
 .cart li {
   margin: 5px 0;
 }
+.place-order-btn {
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #00b894;       /* nice green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+.place-order-btn:hover {
+  background: #01966e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 184, 148, 0.4);
+}
+
+.place-order-btn:active {
+  transform: scale(0.98);
+}
+
 
 /* Modal */
 .modal {

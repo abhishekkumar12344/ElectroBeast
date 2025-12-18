@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom"; // ✅ add navigation
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Products.css";
 
 const Products = () => {
+  const navigate = useNavigate(); // ✅ hook for navigation
 
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
   const [cart, setCart] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  // -------------------- PRODUCT DATA --------------------
   const products = [
     {
       id: 1,
@@ -18,38 +20,41 @@ const Products = () => {
       category: "Cycle",
       price: 35000,
       rating: 4,
-      image: "/assets/products/product1.jpg"},
-      {
+      image: "/assets/products/product1.jpg",
+    },
+    {
       id: 2,
       name: "Electric Cycle",
       category: "Cycle",
-      price: 770000,
+      price: 77000,
       rating: 4,
-      image: "/assets/products/product2.jpg"},
-      {
+      image: "/assets/products/product2.jpg",
+    },
+    {
       id: 3,
       name: "Electric Cycle",
       category: "Cycle",
       price: 99000,
       rating: 4,
-      image: "/assets/products/product6.jpg"},
-      {
+      image: "/assets/products/product6.jpg",
+    },
+    {
       id: 4,
       name: "Electric Cycle",
       category: "Cycle",
-      price:88000,
+      price: 88000,
       rating: 4,
-      image: "/assets/products/product4.jpg"},
-      {
+      image: "/assets/products/product4.jpg",
+    },
+    {
       id: 5,
       name: "Electric Cycle",
       category: "Cycle",
       price: 33000,
       rating: 4,
-      image: "/assets/products/product5.jpg"},
-     
-    
-    {
+      image: "/assets/products/product5.jpg",
+    },
+       {
       id: 6,
       name: "EV Scooter",
       category: "Scooter",
@@ -97,42 +102,62 @@ const Products = () => {
       rating: 5,
       image: "https://imgs.search.brave.com/X1H5hldk7FeX0faplZp-woE260Lt6kNSX1KKvTXYaSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzM4LzYxLzE4/LzM2MF9GXzExMzg2/MTE4ODNfeVBhM0FM/MTZOMmxmcUNVV3RZ/RUhVVGtVQldNdkNV/c3UuanBn",
     },
-     
-
   ];
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  // FILTERED PRODUCT LIST
   const filteredProducts = products.filter(
     (p) =>
       (filter === "All" || p.category === filter) &&
       p.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  // ---------------- CART FUNCTIONS ----------------
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
+  // ---------------- NAVIGATION TO ORDER PAGE ----------------
+  const placeOrder = () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    navigate("/order", {
+      state: { cart, totalPrice },
+    });
+  };
+
+  const buyNow = (product) => {
+    navigate("/order", {
+      state: { cart: [product], totalPrice: product.price },
+    });
+  };
+
   return (
     <div className="products-page">
-      {/* Hero Section */}
+
+      {/* HERO SECTION */}
       <div className="products-hero" data-aos="fade-up">
         <h1>Explore Our EV Products</h1>
         <p>Discover premium electric cycles, batteries & chargers</p>
       </div>
 
-      {/* Filters & Search */}
+      {/* FILTERS */}
       <div className="filter-search" data-aos="fade-right">
         <select onChange={(e) => setFilter(e.target.value)}>
           <option value="All">All</option>
           <option value="Cycle">Cycles</option>
           <option value="Battery">Batteries</option>
-          <option value="Charger">Chargers</option>
+          <option value="Scooter">Scooters</option>
         </select>
+
         <input
           type="text"
           placeholder="🔍 Search products..."
@@ -141,7 +166,7 @@ const Products = () => {
         />
       </div>
 
-      {/* Product Grid */}
+      {/* PRODUCT GRID */}
       <div className="products-grid">
         {filteredProducts.map((product, index) => (
           <div
@@ -152,13 +177,19 @@ const Products = () => {
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p className="price">₹{product.price.toLocaleString()}</p>
+
             <div className="stars">
               {"★".repeat(product.rating)}
               {"☆".repeat(5 - product.rating)}
             </div>
+
             <div className="buttons">
               <button onClick={() => addToCart(product)}>Add to Cart</button>
-              <button className="buy-now">Buy Now</button>
+
+              <button className="buy-now" onClick={() => buyNow(product)}>
+                Buy Now
+              </button>
+
               <button
                 className="quick-view"
                 onClick={() => setSelectedProduct(product)}
@@ -170,9 +201,10 @@ const Products = () => {
         ))}
       </div>
 
-      {/* Cart */}
+      {/* CART SECTION */}
       <div className="cart" data-aos="fade-left">
         <h2>🛒 Your Cart</h2>
+
         {cart.length === 0 ? (
           <p>No items yet.</p>
         ) : (
@@ -184,12 +216,17 @@ const Products = () => {
                 </li>
               ))}
             </ul>
+
             <h3>Total: ₹{totalPrice.toLocaleString()}</h3>
+
+            <button className="place-order-btn" onClick={placeOrder}>
+              Place Order
+            </button>
           </>
         )}
       </div>
 
-      {/* Quick View Modal */}
+      {/* QUICK VIEW MODAL */}
       {selectedProduct && (
         <div className="modal" onClick={() => setSelectedProduct(null)}>
           <div
@@ -199,12 +236,23 @@ const Products = () => {
           >
             <img src={selectedProduct.image} alt={selectedProduct.name} />
             <h2>{selectedProduct.name}</h2>
-            <p>{selectedProduct.description}</p>
-            <p className="price">₹{selectedProduct.price.toLocaleString()}</p>
+
+            <p className="price">
+              ₹{selectedProduct.price.toLocaleString()}
+            </p>
+
             <button onClick={() => addToCart(selectedProduct)}>
               Add to Cart
             </button>
-            <button className="close" onClick={() => setSelectedProduct(null)}>
+
+            <button className="buy-now" onClick={() => buyNow(selectedProduct)}>
+              Buy Now
+            </button>
+
+            <button
+              className="close"
+              onClick={() => setSelectedProduct(null)}
+            >
               Close
             </button>
           </div>

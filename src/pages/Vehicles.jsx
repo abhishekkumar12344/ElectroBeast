@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
+
 import "./Vehicles.css";
 
+
+
 const Vehicles = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("Cycles");
   const [selectedVehicle, setSelectedVehicle] = useState(null);
 
@@ -177,7 +182,10 @@ const Vehicles = () => {
             <p className="price">{v.price}</p>
             <p>🔋 {v.battery}</p>
             <p>⚡ Range: {v.range} | Speed: {v.speed}</p>
-            <button onClick={() => setSelectedVehicle(v)}>Quick View</button>
+            <button onClick={() => navigate(`/vehicle/${v.id}`, { state: v })}>
+  View Details
+</button>
+
           </div>
         ))}
       </div>
