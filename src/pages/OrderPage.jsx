@@ -8,15 +8,16 @@ const OrderPage = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  const cart = state?.cart || [];
-  const initialTotal = state?.totalPrice || 0;
+  // ✅ CART SOURCE (STATE → LOCALSTORAGE FALLBACK)
+  const cart =
+    state?.cart ||
+    JSON.parse(localStorage.getItem("cart")) ||
+    [];
 
-  // Quantity state
   const [quantities, setQuantities] = useState(
     cart.map(() => 1)
   );
 
-  // Form state
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -27,86 +28,116 @@ const OrderPage = () => {
   });
 
   useEffect(() => {
-    AOS.init({ duration: 900, once: true });
+    AOS.init({ duration: 800, once: true });
   }, []);
 
-  // Update form
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  // ❌ NO CART SAFETY
+  if (cart.length === 0) {
+    return (
+      <div className="order-empty">
+        <h2>No items in your order</h2>
+        <button onClick={() => navigate("/products")}>
+          Back to Products
+        </button>
+      </div>
+    );
+  }
 
-  // Update quantity
-  const updateQuantity = (index, amount) => {
-    setQuantities((prev) =>
-      prev.map((q, i) => (i === index ? Math.max(1, q + amount) : q))
+  // ✅ QUANTITY UPDATE
+  const updateQty = (index, value) => {
+    setQuantities((q) =>
+      q.map((item, i) =>
+        i === index ? Math.max(1, item + value) : item
+      )
     );
   };
 
-  // Total calculation
+  // ✅ TOTAL PRICE
   const totalPrice = cart.reduce(
     (sum, item, i) => sum + item.price * quantities[i],
     0
   );
 
-  // Confirm Order
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // ✅ CONFIRM ORDER (FINAL FIX)
   const confirmOrder = (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.phone || !formData.address) {
-      alert("Please fill all required fields.");
+      alert("Please fill all required fields");
       return;
     }
 
-    alert("🎉 Order Placed Successfully!");
+    const newOrder = {
+      id: "EB" + Date.now(),
+      items: cart.map((item, i) => ({
+        name: item.name,
+        price: item.price,
+        image: item.image || null,
+        quantity: quantities[i],
+      })),
+      total: totalPrice,
+      status: "Confirmed",
+      date: new Date().toLocaleDateString(),
+      payment: formData.payment,
+    };
 
-    navigate("/products");
-  };
+    // ✅ SAVE ORDER
+    const existingOrders =
+      JSON.parse(localStorage.getItem("orders")) || [];
 
-  // If user goes to order page without cart
-  if (cart.length === 0) {
-    return (
-      <div className="order-page empty-order">
-        <h2>No items in your order.</h2>
-        <button onClick={() => navigate("/products")}>Back to Products</button>
-      </div>
+    localStorage.setItem(
+      "orders",
+      JSON.stringify([newOrder, ...existingOrders])
     );
-  }
+
+    // ✅ CLEAR CART AFTER ORDER
+    localStorage.removeItem("cart");
+
+    alert("🎉 Order Confirmed Successfully!");
+    navigate("/dashboard");
+  };
 
   return (
     <div className="order-page">
-      <h1 data-aos="fade-up">Checkout & Order Summary</h1>
+      <h1 data-aos="fade-down">Checkout</h1>
 
-      <div className="order-content">
+      <div className="order-layout">
 
-        {/* LEFT SIDE — ORDER SUMMARY */}
-        <div className="order-items" data-aos="fade-right">
+        {/* LEFT – ORDER SUMMARY */}
+        <div className="order-summary" data-aos="fade-right">
           <h2>Your Items</h2>
 
           {cart.map((item, i) => (
-            <div className="item-card" key={i} data-aos="zoom-in">
-              <img src={item.image} alt={item.name} />
+            <div className="order-item" key={i}>
+              {item.image ? (
+                <img src={item.image} alt={item.name} />
+              ) : (
+                <div className="img-placeholder">📦</div>
+              )}
 
-              <div className="item-info">
-                <h3>{item.name}</h3>
+              <div>
+                <h4>{item.name}</h4>
                 <p>₹{item.price.toLocaleString()}</p>
 
-                {/* Quantity Counter */}
-                <div className="quantity-box">
-                  <button onClick={() => updateQuantity(i, -1)}>-</button>
+                <div className="qty">
+                  <button onClick={() => updateQty(i, -1)}>-</button>
                   <span>{quantities[i]}</span>
-                  <button onClick={() => updateQuantity(i, 1)}>+</button>
+                  <button onClick={() => updateQty(i, 1)}>+</button>
                 </div>
               </div>
             </div>
           ))}
 
-          <h3 className="total">Total: ₹{totalPrice.toLocaleString()}</h3>
+          <h3 className="total">
+            Total: ₹{totalPrice.toLocaleString()}
+          </h3>
         </div>
 
-        {/* RIGHT SIDE — DELIVERY FORM */}
+        {/* RIGHT – DELIVERY FORM */}
         <div className="order-form" data-aos="fade-left">
           <h2>Delivery Details</h2>
 
@@ -132,37 +163,36 @@ const OrderPage = () => {
               onChange={handleChange}
             />
 
-            <input
-              name="city"
-              placeholder="City"
-              value={formData.city}
-              onChange={handleChange}
-            />
+            <div className="row">
+              <input
+                name="city"
+                placeholder="City"
+                value={formData.city}
+                onChange={handleChange}
+              />
+              <input
+                name="pincode"
+                placeholder="Pincode"
+                value={formData.pincode}
+                onChange={handleChange}
+              />
+            </div>
 
-            <input
-              name="pincode"
-              placeholder="Pincode"
-              value={formData.pincode}
-              onChange={handleChange}
-            />
-
-            {/* PAYMENT METHOD */}
-            <label className="payment-label">Payment Method</label>
             <select
               name="payment"
               value={formData.payment}
               onChange={handleChange}
-              className="payment-select"
             >
               <option value="COD">Cash on Delivery</option>
               <option value="Online">Online Payment</option>
             </select>
 
-            <button className="confirm-order-btn" type="submit">
+            <button type="submit" className="confirm-btn">
               Confirm Order
             </button>
           </form>
         </div>
+
       </div>
     </div>
   );

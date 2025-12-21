@@ -54,13 +54,14 @@ const Products = () => {
       rating: 4,
       image: "/assets/products/product5.jpg",
     },
-       {
+    {
       id: 6,
       name: "EV Scooter",
       category: "Scooter",
       price: 75000,
       rating: 4,
-      image: "https://imgs.search.brave.com/Hu-KnYsEnIvV0HvsPSCfqa5Cz_KjBb2Tc1lD-1rWSzs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTg5Nzg4MDYtNzMw/NzM4NDNiMTVlP2Zt/PWpwZyZxPTYwJnc9/MzAwMCZpeGxpYj1y/Yi00LjEuMCZpeGlk/PU0zd3hNakEzZkRC/OE1IeHpaV0Z5WTJo/OE5IeDhaV3hsWTNS/eWFXTWxNakJpYVdO/NVkyeGxmR1Z1ZkRC/OGZEQjhmSHd3",
+      image:
+        "https://imgs.search.brave.com/MANDowOujo0e7rnIfukc2iltjNu80Mti2BXAwnEbOGA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbGVj/c29uLnMzLmFwLXNv/dXRoLTEuYW1hem9u/YXdzLmNvbS9Ib21l/UGFnZV9DeWNsZV9N/b2RlbHMvbGFkaWVz/X3BlYWNoLnBuZw",
     },
     {
       id: 7,
@@ -68,7 +69,8 @@ const Products = () => {
       category: "Cycle",
       price: 33000,
       rating: 4,
-      image: "https://imgs.search.brave.com/7ysBpnDXDdzkusCuWhD4uQOc82LRSkv7VlQ9zJXqNBo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGV5YmlrZS5jb20v/Y2RuL3Nob3AvZmls/ZXMvSGV5YmlrZV9I/b3Jpem9uX1VfQmVz/dF9FbGVjdHJpY19C/aWtlX0RlYWxzX0Jl/c3RfRm9sZGluZ19G/YXRfVGlyZV9FYmlr/ZV9Pbl9TYWxlLnBu/Zz92PTE3NTQzOTA3/MzAmd2lkdGg9MjA0/OA",
+      image:
+        "https://imgs.search.brave.com/fJe6GbczfYp_V1BLBoDHwaiKthKyUgLotP3FvCGMXgA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWJhYnlrYXJ0LmNv/bS9hc3NldHMvaW1h/Z2VzL3Byb2R1Y3Rz/LzQ2OTYyMGIxNTgx/NmQ0YWVkNDA1Y2Vl/MjhiOTk1MTg2Lmpw/Zw",
     },
     {
       id: 8,
@@ -76,7 +78,8 @@ const Products = () => {
       category: "Cycle",
       price: 31000,
       rating: 4,
-      image: "https://imgs.search.brave.com/vvBTMiiLQDeUaFXvAsdLS3RguzT040ifBz_uXTfNZXQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9j/b29sLWJpY3ljbGUt/c3R1ZGlvXzIzLTIx/NTA4ODQyNzguanBn/P3NlbXQ9YWlzX2h5/YnJpZCZ3PTc0MA",
+      image:
+        "https://imgs.search.brave.com/jXDfkAyUYQpZgCZjwPz91BJD5-W6JnUuYPnSNQglAeA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzYxMi82MTIveGlm/MHEvZWxlY3RyaWMt/Y3ljbGUvOS9iL3kv/ZG9wZS1raWRzLWVs/ZWN0cmljY3ljbGUt/d2l0aC01LTJhaC1s/aS1pb24tcmVtb3Zl/LWJhdHRlcnktaGln/aC1vcmlnaW5hbC1p/bWFoZzczcWQ5bnRo/aHF5LmpwZWc_cT03/MA",
     },
     {
       id: 9,
@@ -84,9 +87,10 @@ const Products = () => {
       category: "Cycle",
       price: 74000,
       rating: 4,
-      image: "https://imgs.search.brave.com/oK0fMsjhNQWiXgHHYqtWQOr_bQ8us6_Pu9gWkFO0deM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vU2tl/cmktRWxlY3RyaWMt/U2Nvb3Rlci0yNi1G/YXQtVGlyZS1FLUJp/a2UtMTAwMFctTW90/b3ItNDhWLTEzQWgt/UmVtb3ZhYmxlLUVs/ZWN0cmljLUJpa2Ut/QWR1bHRzLTYwLU1p/bGVzLTI1LW1waC1F/bGVjdHJpYy1CaWN5/Y2xlLTctU3BlZWQt/RnJvbnQtU3VzcGVu/c2lfYjU2MDYxMzkt/Y2UzYy00ZGZmLTk4/YTctMmUwMDZjNGMz/OTMzLmU2ZmZiMDE1/MmNkYTZhZjgyNDg4/MWY0OGM3NDJiZDM4/LmpwZWc_b2RuSGVp/Z2h0PTU4MCZvZG5X/aWR0aD01ODAmb2Ru/Qmc9RkZGRkZG",
+      image:
+        "https://imgs.search.brave.com/-Ga95mA_CoyXo5NLQaan2Au7CNs2_pTHcrqiJujKqF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFMRlVpM2xRWUwu/anBn",
     },
-     {
+    {
       id: 10,
       name: "Lithium Battery Pack",
       category: "Battery",
@@ -94,13 +98,14 @@ const Products = () => {
       rating: 5,
       image: "/assets/products/battry.jpg",
     },
-     {
+    {
       id: 11,
       name: "Lithium Battery Pack",
       category: "Battery",
       price: 12000,
       rating: 5,
-      image: "https://imgs.search.brave.com/X1H5hldk7FeX0faplZp-woE260Lt6kNSX1KKvTXYaSc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzExLzM4LzYxLzE4/LzM2MF9GXzExMzg2/MTE4ODNfeVBhM0FM/MTZOMmxmcUNVV3RZ/RUhVVGtVQldNdkNV/c3UuanBn",
+      image:
+        "https://imgs.search.brave.com/32prmdbJiiS_tk-xLy80P-sg_-1j3pppvQvUWJW6gGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/ODgwNTYwNy9waG90/by9tb2Rlcm4tbGl0/aGl1bS1pb24tYmF0/dGVyeS10ZWNobm9s/b2d5LWNvbmNlcHQt/bWV0YWwtbGktaW9u/LWJhdHRlcnktY2Vs/bHMtd2l0aC1lbGVj/dHJpYy5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9cjBWWG9f/UlB4TUw4dlVkS1RP/c1NWaGlEdTFjckM2/QVBOLVl4bzNSUGpr/MD0",
     },
   ];
 
@@ -142,7 +147,6 @@ const Products = () => {
 
   return (
     <div className="products-page">
-
       {/* HERO SECTION */}
       <div className="products-hero" data-aos="fade-up">
         <h1>Explore Our EV Products</h1>

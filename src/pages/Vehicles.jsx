@@ -75,7 +75,7 @@ const Vehicles = () => {
         range: "50 km",
         speed: "25 km/h",
         battery: "Lithium-ion 36V",
-        image: "https://imgs.search.brave.com/PnAF6pmo3FsHk68IpsrSmdpGHCusM6JNuAFz9W5hpEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzYxMi82MTIveGlm/MHEvZWxlY3RyaWMt/Y3ljbGUvay81L3ov/aHVtLWxvbmctcmFu/Z2Utc21hcnQtcGx1/cy1ibGFjay1vcmFu/Z2UtMTgtNS1tb3Rv/dm9sdC1zaW5nbGUt/b3JpZ2luYWwtaW1h/Z3A3ejZoZnN1bnVi/dS5qcGVnP3E9NzA",
+        image: "https://imgs.search.brave.com/-Ga95mA_CoyXo5NLQaan2Au7CNs2_pTHcrqiJujKqF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFMRlVpM2xRWUwu/anBn",
       },
       {
         id: 7,
