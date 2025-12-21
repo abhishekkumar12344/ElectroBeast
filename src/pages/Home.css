@@ -178,6 +178,7 @@ h2 {
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 .product-card:hover {
   transform: translateY(-8px) scale(1.03);
@@ -191,7 +192,7 @@ h2 {
 .product-card h3 {
   margin: 10px 0;
   font-size: 1.3rem;
-  color: #222;
+  color:white;
 }
 .product-card button {
   margin-top: 15px;
