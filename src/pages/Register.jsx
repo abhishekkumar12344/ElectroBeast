@@ -127,7 +127,7 @@ const Register = () => {
       </div>
 
       {/* --- ADDED WAVE ANIMATION TO MATCH LOGIN PAGE --- */}
-      <div className="wave-container">
+      {/* <div className="wave-container">
         <svg
           className="waves"
           xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@ const Register = () => {
             <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
           </g>
         </svg>
-      </div>
+      </div> */}
       {/* --- END ANIMATION --- */}
     </div>
   );
