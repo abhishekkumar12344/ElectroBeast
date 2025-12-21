@@ -38,7 +38,8 @@ const Register = () => {
     setMessage("");
 
     try {
-      const res = await axios.post("https://electrobeast-backend.onrender.com/r", {
+      // --- FIX: Updated URL from '/r' to the correct API endpoint ---
+      const res = await axios.post("https://electrobeast-backend.onrender.com/api/auth/register", {
         username: formData.username,
         email: formData.email,
         password: formData.password,
@@ -51,6 +52,7 @@ const Register = () => {
         setTimeout(() => navigate("/login"), 2000);
       }
     } catch (err) {
+      console.error("Register Error:", err);
       if (err.response) {
         setMessage(`❌ ${err.response.data.message}`);
       } else {
@@ -118,11 +120,52 @@ const Register = () => {
             {loading ? "Registering..." : "Register"}
           </button>
         </form>
-        {message && <p>{message}</p>}
+        {message && <p className="message-text">{message}</p>}
         <p>
           Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
+
+      {/* --- ADDED WAVE ANIMATION TO MATCH LOGIN PAGE --- */}
+      <div className="wave-container">
+        <svg
+          className="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shapeRendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g className="parallax">
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      {/* --- END ANIMATION --- */}
     </div>
   );
 };

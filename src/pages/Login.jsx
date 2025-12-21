@@ -27,8 +27,9 @@ const Login = () => {
     setError("");
 
     try {
+      // --- FIX: CHANGED URL TO RENDER BACKEND ---
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://electrobeast-backend.onrender.com/api/auth/login",
         {
           email,
           password,
@@ -95,7 +96,6 @@ const Login = () => {
         </p>
       </div>
 
-      {/* --- ADDED THIS SECTION FOR THE ANIMATED WAVES --- */}
       <div className="wave-container">
         <svg
           className="waves"
@@ -134,7 +134,6 @@ const Login = () => {
           </g>
         </svg>
       </div>
-      {/* --- END OF ADDED SECTION --- */}
     </div>
   );
 };
